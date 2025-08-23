@@ -34,5 +34,5 @@ Installation instructions:
 
 Check this post or GitHub to ensure you have the latest version!
 
-Discord post: click [HERE](https://discord.com/channels/897073630868013057/1408688745431040011) -> click the :arrow_down: button in the bottom-right corner "Download wolfiefilter.lua"  
+Discord post: click [HERE](https://discord.com/channels/897073630868013057/1408688745431040011/1408688745431040011) -> click the :arrow_down: button in the bottom-right corner "Download wolfiefilter.lua"  
 GitHub link: click [HERE](<https://github.com/WolfieeifloW/d2rmdfilter/blob/main/wolfiefilter.lua>) -> click the :arrow_down: button in the top-right corner "Download raw file"
