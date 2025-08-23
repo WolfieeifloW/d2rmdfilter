@@ -276,7 +276,7 @@ return {
             notify = "{orange}DON'T FORGET ME! {link}"
         },
         -- +-------------------------+
-        -- | TEMPERED  ITEMS         |
+        -- | TEMPERED ITEMS          |
         -- +-------------------------+
         { -- Rule 40: Reminder to pick up Tempered items so they don't get left behind
             codes = "allitems",
