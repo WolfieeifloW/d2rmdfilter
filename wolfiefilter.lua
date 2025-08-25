@@ -222,16 +222,10 @@ return {
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             hide = true
         },
-        { -- Rule 33: Hide Magic Large Charms (relatively useless)
-            code = "cm2",
-            quality = "4",
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            hide = true
-        },
         -- +-------------------------+
         -- | SET ITEMS               |
         -- +-------------------------+
-        { -- Rule 34: Notify and small border for all Set items
+        { -- Rule 33: Notify and small border for all Set items
             codes = "allitems",
             quality = "5",
             notify = "{green}Set Drop {link}",
@@ -240,7 +234,7 @@ return {
         -- +-------------------------+
         -- | RARE ITEMS              |
         -- +-------------------------+
-        { -- Rule 35: Small border on Rare Amulets, Rings, and Jewels
+        { -- Rule 34: Small border on Rare Amulets, Rings, and Jewels
             codes = { "amu", "rin", "jew" },
             quality = "6",
             border = { 255, 255, 100, 255, 1 }
@@ -248,7 +242,7 @@ return {
         -- +-------------------------+
         -- | UNIQUE ITEMS            |
         -- +-------------------------+
-        { -- Rule 36: Notify and small border for all Unique items
+        { -- Rule 35: Notify and small border for all Unique items
             codes = "allitems",
             quality = "7",
             notify = "Unique Drop {link}",
@@ -257,7 +251,7 @@ return {
         -- +-------------------------+
         -- | CRAFTED ITEMS           |
         -- +-------------------------+
-        { -- Rule 37: Reminder to pick up Crafted items so they don't get left behind
+        { -- Rule 36: Reminder to pick up Crafted items so they don't get left behind
             codes = "allitems",
             quality = "8",
             notify = "{orange}DON'T FORGET ME! {link}"
@@ -265,7 +259,7 @@ return {
         -- +-------------------------+
         -- | TEMPERED ITEMS          |
         -- +-------------------------+
-        { -- Rule 38: Reminder to pick up Tempered items so they don't get left behind
+        { -- Rule 37: Reminder to pick up Tempered items so they don't get left behind
             codes = "allitems",
             quality = "9",
             notify = "{green}DON'T FORGET ME! {link}"
@@ -273,7 +267,7 @@ return {
         -- +-------------------------+
         -- | POTIONS                 |
         -- +-------------------------+
-        { -- Rule 39: Hides all non-large Potions & Scrolls after Normal Difficulty
+        { -- Rule 38: Hides all non-large Potions & Scrolls after Normal Difficulty
             codes = { "mp1", "mp2", "mp3", "hp1", "hp2", "hp3", "isc", "tsc", "rvs"},
             difficulty = "1+",
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
@@ -282,13 +276,13 @@ return {
         -- +-------------------------+
         -- | BASE ITEMS              |
         -- +-------------------------+
-        { -- Rule 40: Reminder to pick up Runeword items so they don't get left behind
+        { -- Rule 39: Reminder to pick up Runeword items so they don't get left behind
             codes = "allitems",
             runeword = true,
             notify = "{gray}DON'T FORGET ME! {gold}{link}",
             border = { 199, 179, 119, 255, 3 }
         },
-        { -- Rule 41: Hiding Inferior items at Character Level 10+
+        { -- Rule 40: Hiding Inferior items at Character Level 10+
             codes = "allitems",
             quality = "1",
             runeword = false,
@@ -296,14 +290,14 @@ return {
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             hide = true
         },
-        { -- Rule 42: Hiding Normal quivers at Character Level 10+
+        { -- Rule 41: Hiding Normal quivers at Character Level 10+
             codes = { "aqv", "cqv" },
             quality = "3-",
             pstat = { index = 12, op = ">=", value = 10 },
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             hide = true
         },
-        { -- Rule 43: Hides all 1 socket Inferior, Normal, and Superior items at Character Level 25+
+        { -- Rule 42: Hides all 1 socket Inferior, Normal, and Superior items at Character Level 25+
             codes = "allitems",
             sockets = "1",
             quality = "3-",
@@ -311,7 +305,7 @@ return {
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             hide = true
         },
-        { -- Rule 44: Hides non-Superior bases that have 0 sockets at Character Level 25+
+        { -- Rule 43: Hides non-Superior bases that have 0 sockets at Character Level 25+
             codes = { "2ax", "2hs", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7hw", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mf", "7mp", "7o7", "7p7", "7pa", "7pi", "7qr", "7s7", "7s8", "7sb", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7vo", "7wa", "7wb", "7wc", "7wd", "7wh", "7wn", "7xf", "7yw", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gs", "9gw", "9h9", "9ha", "9hw", "9ja", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mp", "9mt", "9p9", "9pa", "9pi", "9qr", "9s8", "9s9", "9sb", "9sm", "9sp", "9sr", "9ss", "9st", "9ta", "9tk", "9tr", "9ts", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9xf", "9yw", "aar", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "clb", "clm", "clw", "crn", "crs", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "fhl", "fla", "flb", "flc", "fld", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsd", "gst", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "jav", "kit", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mpi", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "nec", "ned", "nee", "nef", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pik", "pil", "plt", "qui", "rng", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scy", "skp", "skr", "sml", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wst", "xap", "xar", "xcl", "xea", "xh9", "xhb", "xhg", "xhl", "xhm", "xhn", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlm", "xlt", "xmb", "xmg", "xml", "xng", "xow", "xpk", "xpl", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb" },
             quality = "2-",
             sockets = "0",
@@ -319,7 +313,7 @@ return {
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             hide = true
         },
-        { -- Rule 45: Hides all +0 to Paladin Skill Levels Scepters at Character Level 50+
+        { -- Rule 44: Hides all +0 to Paladin Skill Levels Scepters at Character Level 50+
             codes = { "scp", "gsc", "wsp", "7sc", "7qs", "7ws", "9sc", "9qs", "9ws" },
             quality = "4-",
             runeword = false,
@@ -328,7 +322,7 @@ return {
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             hide = true
         },
-        { -- Rule 46: Hides bases that don't roll their maximum of 3 sockets at Character Level 80+
+        { -- Rule 45: Hides bases that don't roll their maximum of 3 sockets at Character Level 80+
             codes = { "xla", "xui", "xea", "brs", "chn", "ltp", "scl", "rng", "9cl", "clb", "7cl", "7ha", "9ha", "hax", "sbw", "7sp", "9sp", "spc", "7cs", "7lw", "7tw", "7qr", "7ar", "7xf", "7wb", "9xf", "9lw", "9tw", "9cs", "9ar", "9qr", "9wb", "btl", "clw", "axf", "skr", "wrb", "lxb", "amf", "ama", "am5", "7s7", "7ja", "7pi", "9pi", "9s9", "9ja", "ssp", "7kr", "7bl", "9kr", "9bl", "bld", "kri", "Pm1", "Pm2", "Pm3", "7mt", "7ma", "9ma", "9mt", "mac", "mst", "obf", "oba", "ob5", "7sc", "7qs", "9qs", "9sc", "gsc", "scp", "Ds1", "Ds2", "Ds3", "6ss", "8ss", "sst", "k01", "k02", "2hs", "7sm", "7sb", "7ss", "7fc", "7wd", "9wd", "9ss", "9sm", "9sb", "9fc", "flc", "sbr", "ssd", "scm", "wsd", "ne6", "ne7", "ne1", "ne2", "uuc", "xsh", "bsh", "lrg", "spk", "dr9", "dr1", "bab", "bae", "bad", "bac", "baf", "ba6", "ba7", "ba8", "ba9", "baa", "ba4", "ba5", "ba1", "ba2", "ba3", "drb", "drf", "drd", "dre", "drc", "dr6", "dr7", "dr8", "dra", "dr3", "dr4", "dr2", "dr5", "ulm", "uh9", "urn", "usk", "uhl", "ukp", "uap", "uhm", "Pc3", "Pc2", "xhl", "xlm", "xsk", "xrn", "xh9", "xkp", "xhm", "bhm", "crn", "fhl", "ghm", "msk", "Pc1", "l08", "l09", "Zc1", "Zc2", "Zc3", "Zc4", "Zc5", "Zc6", "ci0", "ci1", "ci2", "ci3", "ulb", "uvb", "umb", "utb", "uhb", "xvb", "xmb", "xtb", "xhb", "hbt", "tbt", "Ab1", "Ab4", "Ab2", "Ab5", "Ab3", "Ab6", "l11", "Ag2", "Ag4", "Ag5", "Ag6", "uvg", "xvg", "Vg1", "Vg2", "Vg3", "Vg4", "Vg5", "Vg6", "ulg", "utg", "uhg", "umg", "xmg", "xtg", "xhg", "tgl", "hgl", "l10" },
             quality = "3-",
             sockets = "1, 2",
@@ -336,7 +330,7 @@ return {
             pstat = { index = 12, op = ">=", value = 80 },
             hide = true
         },
-        { -- Rule 47: Hides bases that don't roll their maximum of 4 sockets at Character Level 80+
+        { -- Rule 46: Hides bases that don't roll their maximum of 4 sockets at Character Level 80+
             codes = { "Wp3", "Gg3", "Oa3", "Oa2", "Oa1", "Na1", "Na2", "Na3", "Na4", "Na5", "Na6", "Bp3", "Bp6", "Bp1", "Bp4", "Bp2", "Bp5", "Sa1", "Sa2", "Sa3", "Sa4", "Sa5", "Sa6", "utp", "upl", "uhn", "ung", "uui", "urs", "ult", "uld", "uth", "ucl", "uar", "ula", "uul", "utu", "uea", "xul", "xrs", "xth", "xng", "xtp", "xhn", "xar", "xpl", "xld", "xlt", "xcl", "xtu", "aar", "fld", "ful", "gth", "plt", "spl", "Ca1", "Ca4", "Ca5", "Ca2", "Ca6", "Ca3", "l01", "l02", "l03", "l04", "l05", "l06", "Ss3", "Ss4", "Bf4", "cbw", "hbw", "8lx", "mxb", "6cs", "6bs", "6ls", "8cs", "8bs", "8ls", "bst", "cst", "lst", "bsw", "k03", "72h", "92h", "7gs", "7b7", "7cm", "9cm", "9b9", "9gs", "bsd", "clm", "gis", "lsd", "bal", "7gl", "7ts", "9ts", "9gl", "glv", "tsp", "nef", "neg", "neb", "ned", "nee", "ne9", "nea", "ne8", "ne5", "ne4", "ne3", "pad", "pac", "pab", "paf", "pae", "pa7", "pa6", "pa9", "pa8", "paa", "pa4", "pa5", "pa3", "pa2", "pa1", "uow", "upk", "urg", "uml", "uit", "ush", "uts", "xts", "xpk", "xit", "xow", "xrg", "gts", "kit", "tow", "l12" },
             quality = "3-",
             sockets = "1, 2, 3",
@@ -344,7 +338,7 @@ return {
             pstat = { index = 12, op = ">=", value = 80 },
             hide = true
         },
-        { -- Rule 48: Hides bases that don't roll their maximum of 5 sockets at Character Level 80+
+        { -- Rule 47: Hides bases that don't roll their maximum of 5 sockets at Character Level 80+
             codes = { "axe", "bax", "2ax", "lax", "am2", "am1", "6hb", "6cb", "6sb", "8cb", "8sb", "8hb", "lbw", "6rx", "6mx", "6lx", "8rx", "8mx", "rxb", "fla", "bar", "brn", "pax", "spr", "tri", "vou", "wsp", "scy", "9b8" },
             quality = "3-",
             sockets = "1, 2, 3, 4",
@@ -352,7 +346,7 @@ return {
             pstat = { index = 12, op = ">=", value = 80 },
             hide = true
         },
-        { -- Rule 49: Hides bases that don't roll their maximum of 6 sockets at Character Level 80+
+        { -- Rule 48: Hides bases that don't roll their maximum of 6 sockets at Character Level 80+
             codes = { "Ss1", "7s8", "7fb", "Ss2", "9mp", "mpi", "7mp", "Bm1", "Bm2", "Bm3", "Bm4", "Bm5", "Bm6", "Bm7", "Bm8", "Bm9", "Bf1", "Bf2", "Bf3", "Bf5", "Bf6", "7wa", "7ga", "7bt", "72a", "7la", "7gi", "7ba", "7ax", "9gi", "9ba", "9ax", "9ga", "9la", "9wa", "9bt", "92a", "btx", "gix", "gax", "wax", "amc", "amb", "am6", "am7", "6l7", "6s7", "6lw", "6lb", "6sw", "8lb", "8lw", "8l8", "8sw", "8s8", "lbb", "lwb", "sbb", "swb", "6hx", "8hx", "hxb", "7wh", "7m7", "7gm", "9wh", "9gm", "9m9", "gma", "mau", "whm", "7fl", "9fl", "7vo", "7pa", "7st", "7h7", "7sr", "7br", "7o7", "7tr", "7p7", "9h9", "9vo", "9tr", "9p9", "9b7", "9pa", "9br", "9sr", "9st", "hal", "pik", "spt", "7ws", "9ws", "7mp", "7wc", "9wc", "9s8", "mpi", "wsc", "amd", "ame", "am8", "am9", "am3", "am4", "Ds4", "Ds5", "Ds6", "6ws", "8ws", "wst", "7gd", "7gd", "7bs", "7ls", "9bs", "9gd", "9ls", "9fb", "flb", "gsd", "7cr", "9cr", "crs", "7b8", "l13", "l14", "l15", "l16", "l17" },
             quality = "3-",
             sockets = "1, 2, 3, 4, 5",
@@ -363,19 +357,19 @@ return {
         -- +-------------------------+
         -- | TAGS & GENERIC RULES    |
         -- +-------------------------+
-        { -- Rule 50: Adding [Eth] tag to items
+        { -- Rule 49: Adding [Eth] tag to items
             codes = "allitems",
             ethereal = true,
             suffix = " {gray}[Eth]"
         },
-        { -- Rule 51: Adding socket number tag to Ethereal items
+        { -- Rule 50: Adding socket number tag to Ethereal items
             codes = "allitems",
             ethereal = true,
             sockets = "1+",
             prefix = "ÿcI",
             suffix = "{gray}[{sockets}]"
         },
-        { -- Rule 52: Adding socket number tag to Non-Ethereal items
+        { -- Rule 51: Adding socket number tag to Non-Ethereal items
             codes = "allitems",
             ethereal = false,
             sockets = "1+",
@@ -385,7 +379,7 @@ return {
         -- +-------------------------+
         -- | TESTING                 |
         -- +-------------------------+
-        -- { -- Rule 53: For testing, adds a bunch of info to item
+        -- { -- Rule 52: For testing, adds a bunch of info to item
         --     codes = "allitems",
         --     location = { "onplayer", "equipped", "onground", "dropping" },
         --     suffix = " \n{gray}[Code: {orange}{code}{gray}]\n[Quality: {orange}{quality}{gray}]\n[Rarity: {orange}{rarity}{gray}]"
