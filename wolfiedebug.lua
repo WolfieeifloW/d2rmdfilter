@@ -32,7 +32,7 @@ return {
         -- +-------------------------+
         {
             codes = "allitems",
-            location = { "onplayer", "equipped", "onground", "dropping" },
+            location = { "onplayer", "equipped", "onground", "dropping", "atvendor" },
             suffix = "\n{gray}[Code: {orange}{code}{gray}]\n[Quality: {orange}{quality}{gray}]\n[Rarity: {orange}{rarity}{gray}]\n[Index: {orange}{index}{gray}]"
         },
         {
