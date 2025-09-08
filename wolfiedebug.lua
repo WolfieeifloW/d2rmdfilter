@@ -1,8 +1,8 @@
---- Filter Title: WolfieeifloW's Debug v1.0
+--- Filter Title: WolfieeifloW's Debug v1.1
 --- Filter Type: NOT FOR NORMAL USAGE. Used for debugging and testing, mostly for filter creators.
 --- Filter Description: DO NOT USE THIS FOR NORMAL PLAY. It is for testing and debugging.
 return {
-    reload = "WolfieeifloW's DEBUG v1.0: {green}reloaded",
+    reload = "WolfieeifloW's DEBUG v1.1: {green}reloaded",
     debug = false,
     rules = {
         -- +-------------------------+

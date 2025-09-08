@@ -1,4 +1,4 @@
---- Filter Title: WolfieeifloW's Filter v1.4
+--- Filter Title: WolfieeifloW's Filter v1.5
 --- Filter Type: Relaxed, non-strict
 --- Filter Description: Adding some QoL to the game while maintaining a very LoD-like style.\n\nHides small gold piles, Magic items that can be gambled instead for crafting, and in the later character levels it hides useless bases; everything else is shown.\nNotifies and adds borders to good items and new RMD items.\nFilter is very non-strict. For those who are collectors or those who like to still see loot.
 
