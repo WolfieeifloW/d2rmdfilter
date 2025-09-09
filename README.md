@@ -2,7 +2,7 @@ Welcome to my relaxed, non-strict filter! It adds Quality of Life (QoL) to the g
 
 Filter shows all Set and Unique items!
 
-**Latest version:** v1.5  
+**Latest version:** v1.6  
 **Installation instructions:**  
 In the launcher select Options -> Loot Filter. Click "+ Load New Filter" and select the file you downloaded from here or GitHub or check if the filter is already in the dropdown list.  
 Check this post or GitHub to ensure you have the latest version!
