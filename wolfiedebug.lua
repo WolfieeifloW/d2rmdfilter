@@ -1,8 +1,8 @@
---- Filter Title: WolfieeifloW's Debug v1.2
+--- Filter Title: WolfieeifloW's Debug v1.3
 --- Filter Type: NOT FOR NORMAL USAGE. Used for debugging and testing, mostly for filter creators.
 --- Filter Description: DO NOT USE THIS FOR NORMAL PLAY. It is for testing and debugging.
 return {
-    reload = "WolfieeifloW's DEBUG v1.2: {green}reloaded",
+    reload = "WolfieeifloW's DEBUG v1.3: {green}reloaded",
     debug = false,
     rules = {
         -- +-------------------------+
@@ -4872,6 +4872,174 @@ return {
                 ruRU = "\n{gray}Регенерация маны, более быстрый бег/ходьба, все навыки, ловкость, макс. HP%%, радиус света\n{turquoise}Текущая измененная статистика:\n\n{white}Посмотрите страницу с информацией о моде для получения полной информации\nРазличные характеристики будут изменены в зависимости от ваших убийств, смертей и  использованный вес очарования\n{tan}Древний артефакт, связанный с вашей душой, формирующий ее форму.{gold}\n",
                 zhCN = "\n{gray}法力回复、更快的奔跑/行走、所有技能、敏捷、最大 HP%%、光半径\n{turquoise}当前更改的统计数据：\n\n{white}查看 mod 信息页面以获取完整详细信息\n各种统计数据将根据您的杀戮、死亡和死亡进行修改 使用的符咒重量\n{tan}与你的灵魂绑定的古老神器，塑造它的形状{gold}",
                 zhTW = "\n{gray}法力回复、更快的奔跑/行走、所有技能、敏捷、最大HP%%、光半徑\n{turquoise}當前更改的統計數據：\n\n{white}查看mod 信息頁面以獲取完整詳細信息\n各種統計數據將根據您的殺戮、死亡和死亡進行修改使用的符咒重量\n{tan}與你的靈魂綁定的古老神器，塑造它的形狀{gold}",
+            }
+        },
+        {
+            code = "Z02",
+            name_override = "{purple}Amethyst {gold}Remover"
+        },
+        {
+            code = "Z03",
+            name_override = "{yellow}Topaz {gold}Remover"
+        },
+        {
+            code = "Z04",
+            name_override = "{blue}Sapphire {gold}Remover"
+        },
+        {
+            code = "Z05",
+            name_override = "{green}Emerald {gold}Remover"
+        },
+        {
+            code = "Z06",
+            name_override = "{red}Ruby {gold}Remover"
+        },
+        {
+            code = "Z07",
+            name_override = "{white}Diamond {gold}Remover"
+        },
+        {
+            code = "Z08",
+            name_override = "{gray}Skull {gold}Remover"
+        },
+        {
+            code = "Z02",
+            name_override = "{purple}Amethyst {gold}Remover",
+            location = { "onplayer", "atvendor" },
+            prefix = {
+                deDE = "{tan}Würfel allein, um zum nächsten Entfernertyp zu wechseln\n\n{green}Schilde/Schmuck: {white}+30 Verteidigung\n{green}Helme/Gürtel: {white}+10 auf Stärke\n{green}Rüstungen/Stiefel: {white}+10 auf Stärke\n{green}Waffen/Handschuhe: {white}+150 auf Angriffswert\n{turquoise}Edelsteinvorschau:\n\n{white}(Edelsteinpunkte {blue}-1{white})\n",
+                enUS = "{tan}Cube alone to change to next remover type\n\n{green}Shields/Jewelry: {white}+30 Defense\n{green}Helms/Belts: {white}+10 to Strength\n{green}Armors/Boots: {white}+10 to Strength\n{green}Weapons/Gloves: {white}+150 to Attack Rating\n{turquoise}Gem Preview:\n\n{white}(Gem Points {blue}-1{white})\n",
+                esES = "{tan}Cubo solo para cambiar al siguiente tipo de removedor\n\n{green}Escudos/Joyas: {white}+30 Defensa\n{green}Yelmos/Cinturones: {white}+10 a Fuerza\n{green}Armaduras/Botas: {white}+10 a Fuerza\n{green}Armas/Guantes: {white}+150 a Índice de Ataque\n{turquoise}Vista previa de la gema:\n\n{white}(Puntos de gema {blue}-1{white})\n",
+                esMX = "{tan}Cubo solo para cambiar al siguiente tipo de removedor\n\n{green}Escudos/Joyas: {white}+30 Defensa\n{green}Yelmos/Cinturones: {white}+10 a Fuerza\n{green}Armaduras/Botas: {white}+10 a Fuerza\n{green}Armas/Guantes: {white}+150 a Índice de Ataque\n{turquoise}Vista previa de la gema:\n\n{white}(Puntos de gema {blue}-1{white})\n",
+                frFR = "{tan}Cube seul pour passer au type de dissolvant suivant\n\n{vert}Boucliers/Bijoux : {blanc}+30 Défense\n{vert}Casques/Ceintures : {blanc}+10 à la Force\n{vert}Armures/Bottes : {blanc}+10 à la Force\n{vert}Armes/Gants : {blanc}+150 à la valeur d'attaque\n{turquoise}Aperçu des gemmes :\n\n{blanc}(Points de gemmes {bleu}-1{blanc})\n",
+                itIT = "{tan}Solo cubo per passare al tipo di rimozione successivo\n\n{verde}Scudi/Gioielli: {bianco}+30 Difesa\n{verde}Elmi/Cinture: {bianco}+10 alla Forza\n{verde}Armature/Stivali: {bianco}+10 alla Forza\n{verde}Armi/Guanti: {bianco}+150 al Grado di Attacco\n{turchese}Anteprima gemma:\n\n{bianco}(Punti gemma {blu}-1{bianco})\n",
+                jaJP = "{tan}キューブのみで次の除去タイプに変更\n\n{green}盾/宝飾品: {white}防御力+30\n{green}兜/ベルト: {white}筋力+10\n{green}鎧/ブーツ: {white}筋力+10\n{green}武器/手袋: {white}攻撃力+150\n{turquoise}宝石プレビュー:\n\n{white}(宝石ポイント {blue}-1{white})\n",
+                koKR = "{tan}큐브 하나만으로 다음 제거 유형으로 변경\n\n{green}방패/보석: {white}+30 방어력\n{green}헬멧/벨트: {white}+10 근력\n{green}갑옷/부츠: {white}+10 근력\n{green}무기/장갑: {white}+150 공격 등급\n{turquoise}보석 미리보기:\n\n{white}(보석 포인트 {blue}-1{white})\n",
+                plPL = "{tan}Sama kostka, aby zmienić na następny typ usuwania\n\n{zielony}Tarcze/Biżuteria: {biały}+30 Obrony\n{zielony}Hełmy/Paski: {biały}+10 do Siły\n{zielony}Zbroje/Buty: {biały}+10 do Siły\n{zielony}Broń/Rękawice: {biały}+150 do Skuteczności Ataku\n{turkusowy}Podgląd Klejnotu:\n\n{biały}(Punkty Klejnotów {niebieski}-1{biały})\n",
+                ptBR = "{tan}Cubo sozinho para mudar para o próximo tipo de removedor\n\n{verde}Escudos/Joias: {branco}+30 de Defesa\n{verde}Elmos/Cintos: {branco}+10 de Força\n{verde}Armaduras/Botas: {branco}+10 de Força\n{verde}Armas/Luvas: {branco}+150 de Taxa de Ataque\n{turquesa}Prévia da Gema:\n\n{branco}(Pontos de Gema {azul}-1{branco})\n",
+                ruRU = "{tan}Один куб для смены на следующий тип ремувера\n\n{green}Щиты/Украшения: {white}+30 Защиты\n{green}Шлемы/Пояса: {white}+10 к Силе\n{green}Доспехи/Сапоги: {white}+10 к Силе\n{green}Оружие/Перчатки: {white}+150 к Рейтингу Атаки\n{turquoise}Предпросмотр камня:\n\n{white}(Очки камней {blue}-1{white})\n",
+                zhCN = "{tan}单独立方体即可更改为下一种移除类型\n\n{green}盾牌/珠宝：{white}+30 防御\n{green}头盔/腰带：{white}+10 力量\n{green}盔甲/靴子：{white}+10 力量\n{green}武器/手套：{white}+150 攻击值\n{turquoise}宝石预览:\n\n{white}(宝石点数 {blue}-1{white})\n",
+                zhTW = "{tan}單獨立方體即可更改為下一種移除類型\n\n{green}盾牌/珠寶：{white}+30 防禦\n{green}頭盔/腰帶：{white}+10 力量\n{green}盔甲/靴子：{white}+10 力量\n{green}/手套：{white}+150 折位攻擊值（nquowise; {blue}-1{white})\n"
+            }
+        },
+        {
+            code = "Z03",
+            name_override = "{yellow}Topaz {gold}Remover",
+            location = { "onplayer", "atvendor" },
+            prefix = {
+                deDE = "{tan}Würfel allein, um zum nächsten Entfernertyp zu wechseln\n\n{green}Schilde/Schmuck: {white}Blitzresistenz +40 %\n{green}Helme/Gürtel: {white}24 %% bessere Chance, magische Gegenstände zu erhalten\n{green}Rüstungen/Stiefel: {white}24 %% bessere Chance, magische Gegenstände zu erhalten\n{green}Waffen/Handschuhe: {white}Fügt 1-40 Blitzschaden hinzu\n{turquoise}Edelsteinvorschau:\n\n{white}(Edelsteinpunkte {blue}-1{white})\n",
+                enUS = "{tan}Cube alone to change to next remover type\n\n{green}Shields/Jewelry: {white}Lightning Resist +40%%\n{green}Helms/Belts: {white}24%% Better Chance of Getting Magic Items\n{green}Armors/Boots: {white}24%% Better Chance of Getting Magic Items\n{green}Weapons/Gloves: {white}Adds 1-40 lightning damage\n{turquoise}Gem Preview:\n\n{white}(Gem Points {blue}-1{white})\n",
+                esES = "{tan} Cubo solo para cambiar al siguiente tipo de removedor\n\n{green}Escudos/Joyas: {white}Resistencia al rayo +40%%\n{green}Yelmos/Cinturones: {white}24%% más de probabilidad de obtener objetos mágicos\n{green}Armaduras/Botas: {white}24%% más de probabilidad de obtener objetos mágicos\n{green}Armas/Guantes: {white}Añade 1-40 de daño por rayo\n{turquoise}Vista previa de la gema:\n\n{white}(Puntos de gema {blue}-1{white})\n",
+                esMX = "{tan} Cubo solo para cambiar al siguiente tipo de removedor\n\n{green}Escudos/Joyas: {white}Resistencia al rayo +40%%\n{green}Yelmos/Cinturones: {white}24%% más de probabilidad de obtener objetos mágicos\n{green}Armaduras/Botas: {white}24%% más de probabilidad de obtener objetos mágicos\n{green}Armas/Guantes: {white}Añade 1-40 de daño por rayo\n{turquoise}Vista previa de la gema:\n\n{white}(Puntos de gema {blue}-1{white})\n",
+                frFR = "{tan}Cube seul pour passer au type de dissolvant suivant\n\n{vert}Boucliers/Bijoux : {blanc}Résistance à la foudre +40 %\n{vert}Casques/Ceintures : {blanc}Chances supplémentaires de 24 % pour obtenir des objets magiques\n{vert}Armures/Bottes : {blanc}Chances supplémentaires de 24 % pour obtenir des objets magiques\n{vert}Armures/Gants : {blanc}Ajoute 1 à 40 points de dégâts de foudre\n{turquoise}Aperçu des gemmes :\n\n{blanc}(Points de gemmes {bleu}-1{blanc})\n",
+                itIT = "{tan}Cubo da solo per passare al tipo di rimozione successivo\n\n{verde}Scudi/Gioielli: {bianco}Resistenza ai fulmini +40%%\n{verde}Elmi/Cinture: {bianco}24%% Maggiore probabilità di ottenere oggetti magici\n{verde}Armature/Stivali: {bianco}24%% Maggiore probabilità di ottenere oggetti magici\n{verde}Armi/Guanti: {bianco}Aggiunge 1-40 danni da fulmine\n{turchese}Anteprima gemma:\n\n{bianco}(Punti gemma {blu}-1{bianco})\n",
+                jaJP = "{tan}キューブのみで次の除去タイプに変更\n\n{green}盾/宝飾品: {white}雷耐性 +40%%\n{green}兜/ベルト: {white}魔法のアイテム入手確率 24%% 上昇\n{green}鎧/ブーツ: {white}魔法のアイテム入手確率 24%% 上昇\n{green}武器/手袋: {white}1～40 の雷ダメージを追加\n{turquoise}宝石プレビュー:\n\n{white}(宝石ポイント {blue}-1{white})\n",
+                koKR = "{tan}큐브만 사용하여 다음 제거 유형으로 변경\n\n{green}방패/보석: {white}번개 저항력 +40%%\n{green}헬멧/벨트: {white}마법 아이템을 얻을 확률 24%% 증가\n{green}갑옷/부츠: {white}마법 아이템을 얻을 확률 24%% 증가\n{green}무기/장갑: {white}번개 피해 1~40 추가\n{turquoise}보석 미리보기:\n\n{white}(보석 포인트 {blue}-1{white})\n",
+                plPL = "{tan}Sama kostka, aby zmienić na następny typ usuwania\n\n{zielony}Tarcze/Biżuteria: {biały}Odporność na pioruny +40%%\n{zielony}Hełmy/Paski: {biały}24%% większa szansa na zdobycie magicznych przedmiotów\n{zielony}Zbroje/Buty: {biały}24%% większa szansa na zdobycie magicznych przedmiotów\n{zielony}Broń/Rękawice: {biały}Dodaje 1-40 obrażeń od piorunów\n{turkusowy}Podgląd klejnotu:\n\n{biały}(Punkty klejnotów {niebieski}-1{biały})\n",
+                ptBR = "{tan}Cubo sozinho para mudar para o próximo tipo de removedor\n\n{green}Escudos/Joias: {white}Resistência a Raios +40%%\n{green}Elmos/Cintos: {white}24%% Mais Chance de Obter Itens Mágicos\n{green}Armaduras/Botas: {white}24%% Mais Chance de Obter Itens Mágicos\n{green}Armas/Luvas: {white}Adiciona 1-40 de dano de raio\n{turquoise}Prévia da Gema:\n\n{white}(Pontos de Gema {blue}-1{white})\n",
+                ruRU = "{tan}Один куб для смены на следующий тип ремувера\n\n{green}Щиты/Украшения: {white}Сопротивление молнии +40%%\n{green}Шлемы/Пояса: {white}На 24%% больше шанс получить магические предметы\n{green}Доспехи/Сапоги: {white}На 24%% больше шанс получить магические предметы\n{green}Оружие/Перчатки: {white}Добавляет от 1 до 40 урона от молнии\n{turquoise}Предпросмотр камня:\n\n{white}(Очки камней {blue}-1{white})\n",
+                zhCN = "{tan}单独立方体即可更改为下一种移除类型\n\n{green}盾牌/珠宝：{white}抗雷 +40%%\n{green}头盔/腰带：{white}获得魔法物品的几率增加 24%\n{green}盔甲/靴子：{white}获得魔法物品的几率增加 24%\n{green}武器/手套：{white}增加 1-40 点雷电伤害\n{turquoise}宝石预览:\n\n{white}(宝石点数 {blue}-1{white})\n",
+                zhTW = "{tan}單獨立方體即可更改為下一種移除類型\n\n{green}盾牌/珠寶：{white}抗雷 +40%%\n{green}頭盔/腰帶：{white}獲得魔法物品的幾率增加 24%\n{green}盔甲/靴子：{white}獲得魔法物品的幾率增加 24%\n{green}盔甲/靴子：{white}獲得魔法物品的幾率增加 24%{greenhm}/Sm{pite}點雷電傷害\n{turquoise}寶石預覽:\n\n{white}(寶石點數 {blue}-1{white})\n"
+            }
+        },
+        {
+            code = "Z04",
+            name_override = "{blue}Sapphire {gold}Remover",
+            location = { "onplayer", "atvendor" },
+            prefix = {
+                deDE = "{tan}Würfel allein, um zum nächsten Entfernertyp zu wechseln\n\n{green}Schilde/Schmuck: {white}Kälteresistenz +40%%\n{green}Helme/Gürtel: {white}+38 auf Mana\n{green}Rüstungen/Stiefel: {white}+38 auf Mana\n{green}Waffen/Handschuhe: {white}Fügt 10-14 Kälteschaden hinzu\n{turquoise}Edelsteinvorschau:\n\n{white}(Edelsteinpunkte {blue}-1{white})\n",
+                enUS = "{tan}Cube alone to change to next remover type\n\n{green}Shields/Jewelry: {white}Cold Resist +40%%\n{green}Helms/Belts: {white}+38 to Mana\n{green}Armors/Boots: {white}+38 to Mana\n{green}Weapons/Gloves: {white}Adds 10-14 cold damage\n{turquoise}Gem Preview:\n\n{white}(Gem Points {blue}-1{white})\n",
+                esES = "{tan} Cubo solo para cambiar al siguiente tipo de removedor\n\n{green} Escudos/Joyas: {white} Resistencia al frío +40%\n{green} Cascos/Cinturones: {white} +38 al maná\n{green} Armaduras/Botas: {white} +38 al maná\n{green} Armas/Guantes: {white} Agrega 10-14 de daño por frío\n{turquoise} Vista previa de gema:\n\n{white}(Puntos de gema {blue} -1{white})\n",
+                esMX = "{tan} Cubo solo para cambiar al siguiente tipo de removedor\n\n{green} Escudos/Joyas: {white} Resistencia al frío +40%\n{green} Cascos/Cinturones: {white} +38 al maná\n{green} Armaduras/Botas: {white} +38 al maná\n{green} Armas/Guantes: {white} Agrega 10-14 de daño por frío\n{turquoise} Vista previa de gema:\n\n{white}(Puntos de gema {blue} -1{white})\n",
+                frFR = "{tan}Cube seul pour passer au type de dissolvant suivant\n\n{vert}Boucliers/Bijoux : {blanc}Résistance au froid +40 %\n{vert}Casques/Ceintures : {blanc}+38 au mana\n{vert}Armures/Bottes : {blanc}+38 au mana\n{vert}Armes/Gants : {blanc}Ajoute 10 à 14 dégâts de froid\n{turquoise}Aperçu des gemmes :\n\n{blanc}(Points de gemmes {bleu}-1{blanc})\n",
+                itIT = "{tan}Solo cubo per passare al tipo di rimozione successivo\n\n{verde}Scudi/Gioielli: {bianco}Resistenza al freddo +40%%\n{verde}Elmi/Cinture: {bianco}+38 al Mana\n{verde}Armature/Stivali: {bianco}+38 al Mana\n{verde}Armi/Guanti: {bianco}Aggiunge 10-14 danni da freddo\n{turchese}Anteprima gemma:\n\n{bianco}(Punti gemma {blu}-1{bianco})\n",
+                jaJP = "{tan}キューブのみで次の除去タイプに変更\n\n{green}シールド/ジュエリー: {white}冷気耐性 +40%%\n{green}ヘルム/ベルト: {white}マナ +38\n{green}アーマー/ブーツ: {white}マナ +38\n{green}武器/グローブ: {white}冷気ダメージを 10～14 追加\n{turquoise}宝石プレビュー:\n\n{white}(宝石ポイント {blue}-1{white})\n",
+                koKR = "{tan}큐브만 사용하여 다음 제거 유형으로 변경\n\n{green}방패/보석: {white}냉기 저항력 +40%%\n{green}헬멧/벨트: {white}마나 +38\n{green}갑옷/부츠: {white}마나 +38\n{green}무기/장갑: {white}냉기 피해 10-14 추가\n{turquoise}보석 미리보기:\n\n{white}(보석 포인트 {blue}-1{white})\n",
+                plPL = "{tan}Sama kostka, aby zmienić na następny typ usuwania\n\n{zielony}Tarcze/Biżuteria: {biały}Odporność na zimno +40%%\n{zielony}Hełmy/Paski: {biały}+38 do many\n{zielony}Zbroje/Buty: {biały}+38 do many\n{zielony}Broń/Rękawice: {biały}Dodaje 10-14 obrażeń od zimna\n{turkusowy}Podgląd klejnotu:\n\n{biały}(Punkty klejnotów {niebieski}-1{biały})\n",
+                ptBR = "{tan}Cubo sozinho para mudar para o próximo tipo de removedor\n\n{green}Escudos/Joias: {white}Resistência ao Frio +40%%\n{green}Elmos/Cintos: {white}+38 de Mana\n{green}Armaduras/Botas: {white}+38 de Mana\n{green}Armas/Luvas: {white}Adiciona 10-14 de dano de frio\n{turquoise}Prévia da Gema:\n\n{white}(Pontos de Gema {blue}-1{white})\n",
+                ruRU = "{tan}Один куб для смены на следующий тип ремувера\n\n{green}Щиты/Украшения: {white}Сопротивление холоду +40%%\n{green}Шлемы/Пояса: {white}+38 к мане\n{green}Доспехи/Сапоги: {white}+38 к мане\n{green}Оружие/Перчатки: {white}Добавляет 10-14 урона от холода\n{turquoise}Предпросмотр камня:\n\n{white}(Очки камней {blue}-1{white})\n",
+                zhCN = "{tan}单独立方体即可更改为下一种移除类型\n\n{green}盾牌/珠宝：{white}抗寒能力 +40%%\n{green}头盔/腰带：{white}+38 法力\n{green}盔甲/靴子：{white}+38 法力\n{green}武器/手套：{white}增加 10-14 点寒冷伤害\n{turquoise}宝石预览:\n\n{white}(宝石点数 {blue}-1{white})\n",
+                zhTW = "{tan}單獨立方體即可改為下一種移除類型\n\n{green}盾牌/珠寶：{white}抗寒能力 +40%%\n{green}頭盔/腰帶：{white}+38 法力\n{green}盔甲/靴子：{white}+38 法力\n{green}武器/手套：{white}點冷傷害\n{turquoise}寶石預覽:\n\n{white}(寶石點數 {blue}-1{white})\n"
+            }
+        },
+        {
+            code = "Z05",
+            name_override = "{green}Emerald {gold}Remover",
+            location = { "onplayer", "atvendor" },
+            prefix = {
+                deDE = "{tan}Würfel allein, um zum nächsten Entfernertyp zu wechseln\n\n{green}Schilde/Schmuck: {white}Giftresistenz +40 %\n{green}Helme/Gürtel: {white}+10 auf Geschicklichkeit\n{green}Rüstungen/Stiefel: {white}+10 auf Geschicklichkeit\n{green}Waffen/Handschuhe: {white}+100 Giftschaden über 7 Sekunden\n{turquoise}Edelsteinvorschau:\n\n{white}(Edelsteinpunkte {blue}-1{white})\n",
+                enUS = "{tan}Cube alone to change to next remover type\n\n{green}Shields/Jewelry: {white}Poison Resist +40%%\n{green}Helms/Belts: {white}+10 to Dexterity\n{green}Armors/Boots: {white}+10 to Dexterity\n{green}Weapons/Gloves: {white}+100 poison damage over 7 seconds\n{turquoise}Gem Preview:\n\n{white}(Gem Points {blue}-1{white})\n",
+                esES = "{tan}Cubo solo para cambiar al siguiente tipo de removedor\n\n{green}Escudos/Joyas: {white}Resistencia al veneno +40%%\n{green}Yelmos/Cinturones: {white}+10 a Destreza\n{green}Armaduras/Botas: {white}+10 a Destreza\n{green}Armas/Guantes: {white}+100 de daño por veneno durante 7 segundos\n{turquoise}Vista previa de la gema:\n\n{white}(Puntos de gema {blue}-1{white})\n",
+                esMX = "{tan}Cubo solo para cambiar al siguiente tipo de removedor\n\n{green}Escudos/Joyas: {white}Resistencia al veneno +40%%\n{green}Yelmos/Cinturones: {white}+10 a Destreza\n{green}Armaduras/Botas: {white}+10 a Destreza\n{green}Armas/Guantes: {white}+100 de daño por veneno durante 7 segundos\n{turquoise}Vista previa de la gema:\n\n{white}(Puntos de gema {blue}-1{white})\n",
+                frFR = "{tan}Cube seul pour passer au type de dissolvant suivant\n\n{vert}Boucliers/Bijoux : {blanc}Résistance au poison +40 %\n{vert}Casques/Ceintures : {blanc}+10 à la dextérité\n{vert}Armures/Bottes : {blanc}+10 à la dextérité\n{vert}Armes/Gants : {blanc}+100 dégâts de poison en 7 secondes\n{turquoise}Aperçu des gemmes :\n\n{blanc}(Points de gemmes {bleu}-1{blanc})\n",
+                itIT = "{tan}Solo cubo per passare al tipo di rimozione successivo\n\n{verde}Scudi/Gioielli: {bianco}Resistenza al veleno +40%%\n{verde}Elmi/Cinture: {bianco}+10 alla Destrezza\n{verde}Armature/Stivali: {bianco}+10 alla Destrezza\n{verde}Armi/Guanti: {bianco}+100 danni da veleno in 7 secondi\n{turchese}Anteprima gemma:\n\n{bianco}(Punti gemma {blu}-1{bianco})\n",
+                jaJP = "{tan}キューブのみで次の除去タイプに変更\n\n{green}盾/宝飾品: {white}毒耐性 +40%%\n{green}兜/ベルト: {white}器用さ +10\n{green}鎧/ブーツ: {white}器用さ +10\n{green}武器/手袋: {white}7秒間の毒ダメージ +100\n{turquoise}宝石プレビュー:\n\n{white}(宝石ポイント {blue}-1{white})\n",
+                koKR = "{tan}큐브만 사용하여 다음 제거 유형으로 변경\n\n{green}방패/보석: {white}독 저항력 +40%%\n{green}헬멧/벨트: {white}민첩성 +10\n{green}갑옷/부츠: {white}민첩성 +10\n{green}무기/장갑: {white}7초 동안 독 피해 +100\n{turquoise}보석 미리보기:\n\n{white}(보석 포인트 {blue}-1{white})\n",
+                plPL = "{tan}Sama kostka, aby zmienić na następny typ usuwania\n\n{zielony}Tarcze/Biżuteria: {biały}Odporność na truciznę +40%%\n{zielony}Hełmy/Paski: {biały}+10 do Zręczności\n{zielony}Zbroje/Buty: {biały}+10 do Zręczności\n{zielony}Broń/Rękawice: {biały}+100 obrażeń od trucizny w ciągu 7 sekund\n{turkusowy}Podgląd klejnotu:\n\n{biały}(Punkty klejnotów {niebieski}-1{biały})\n",
+                ptBR = "{tan}Cubo sozinho para mudar para o próximo tipo de removedor\n\n{green}Escudos/Joias: {white}Resistência a Veneno +40%%\n{green}Elmos/Cintos: {white}+10 de Destreza\n{green}Armaduras/Botas: {white}+10 de Destreza\n{green}Armas/Luvas: {white}+100 de dano de veneno ao longo de 7 segundos\n{turquoise}Prévia da Gema:\n\n{white}(Pontos de Gema {blue}-1{white})\n",
+                ruRU = "{tan}Один куб для смены на следующий тип ремувера\n\n{green}Щиты/Украшения: {white}Сопротивление яду +40%%\n{green}Шлемы/Пояса: {white}+10 к ловкости\n{green}Доспехи/Сапоги: {white}+10 к ловкости\n{green}Оружие/Перчатки: {white}+100 к урону от яда в течение 7 секунд\n{turquoise}Предпросмотр камня:\n\n{white}(Очки камней {blue}-1{white})\n",
+                zhCN = "{tan}单独立方体即可更改为下一种去除剂类型\n\n{green}盾牌/珠宝：{white}抗毒 +40%%\n{green}头盔/腰带：{white}+10 敏捷\n{green}盔甲/靴子：{white}+10 敏捷\n{green}武器/手套：{white}+100 毒性伤害，持续 7 秒\n{turquoise}宝石预览:\n\n{white}(宝石点数 {blue}-1{white})\n",
+                zhTW = "{tan}單獨立方體即可改為下一種去除劑類型\n\n{green}盾牌/珠寶：{white}抗毒 +40%%\n{green}頭盔/腰帶：{white}+10 盾牌\n{green}盔甲/靴子：{white}+10 敏捷\n{green}武器/敏捷\n{green}盔甲/靴子：{white}+10 敏捷\n{green}武器/敏捷：{white+107秒\n{turquoise}寶石預覽:\n\n{white}(寶石點數 {blue}-1{white})\n"
+            }
+        },
+        {
+            code = "Z06",
+            name_override = "{red}Ruby {gold}Remover",
+            location = { "onplayer", "atvendor" },
+            prefix = {
+                deDE = "{tan}Würfel allein, um zum nächsten Entfernertyp zu wechseln\n\n{green}Schilde/Schmuck: {white}Feuerresistenz +40%%\n{green}Helme/Gürtel: {white}+38 zum Leben\n{green}Rüstungen/Stiefel: {white}+38 zum Leben\n{green}Waffen/Handschuhe: {white}Fügt 15-20 Feuerschaden hinzu\n{turquoise}Edelsteinvorschau:\n\n{white}(Edelsteinpunkte {blue}-1{white})\n",
+                enUS = "{tan}Cube alone to change to next remover type\n\n{green}Shields/Jewelry: {white}Fire Resist +40%%\n{green}Helms/Belts: {white}+38 to Life\n{green}Armors/Boots: {white}+38 to Life\n{green}Weapons/Gloves: {white}Adds 15-20 fire damage\n{turquoise}Gem Preview:\n\n{white}(Gem Points {blue}-1{white})\n",
+                esES = "{tan}Usa el cubo solo para cambiar al siguiente tipo de removedor\n\n{green}Escudos/Joyas: {white}Resistencia al fuego +40%\n{green}Yelmos/Cinturones: {white}+38 a la vida\n{green}Armaduras/Botas: {white}+38 a la vida\n{green}Armas/Guantes: {white}Añade 15-20 de daño por fuego\n{turquoise}Vista previa de la gema:\n\n{white}(Puntos de gema {blue}-1{white})\n",
+                esMX = "{tan}Usa el cubo solo para cambiar al siguiente tipo de removedor\n\n{green}Escudos/Joyas: {white}Resistencia al fuego +40%\n{green}Yelmos/Cinturones: {white}+38 a la vida\n{green}Armaduras/Botas: {white}+38 a la vida\n{green}Armas/Guantes: {white}Añade 15-20 de daño por fuego\n{turquoise}Vista previa de la gema:\n\n{white}(Puntos de gema {blue}-1{white})\n",
+                frFR = "{tan}Cube seul pour passer au type de dissolvant suivant\n\n{vert}Boucliers/Bijoux : {blanc}Résistance au feu +40 %\n{vert}Casques/Ceintures : {blanc}+38 à la vie\n{vert}Armures/Bottes : {blanc}+38 à la vie\n{vert}Armes/Gants : {blanc}Ajoute 15 à 20 points de dégâts de feu\n{turquoise}Aperçu des gemmes :\n\n{blanc}(Points de gemmes {bleu}-1{blanc})\n",
+                itIT = "{tan}Cubo da solo per passare al tipo di rimozione successivo\n\n{verde}Scudi/Gioielli: {bianco}Resistenza al fuoco +40%%\n{verde}Elmi/Cinture: {bianco}+38 alla vita\n{verde}Armature/Stivali: {bianco}+38 alla vita\n{verde}Armi/Guanti: {bianco}Aggiunge 15-20 danni da fuoco\n{turchese}Anteprima gemma:\n\n{bianco}(Punti gemma {blu}-1{bianco})\n",
+                jaJP = "{tan}キューブのみで次の除去タイプに変更\n\n{green}盾/宝飾品: {white}火炎耐性 +40%%\n{green}兜/ベルト: {white}ライフ +38\n{green}鎧/ブーツ: {white}ライフ +38\n{green}武器/手袋: {white}火炎ダメージを 15～20 追加\n{turquoise}宝石プレビュー:\n\n{white}(宝石ポイント {blue}-1{white})\n",
+                koKR = "{tan}큐브만 사용하여 다음 제거 유형으로 변경\n\n{green}방패/보석: {white}화염 저항력 +40%%\n{green}헬멧/벨트: {white}생명력 +38\n{green}갑옷/부츠: {white}생명력 +38\n{green}무기/장갑: {white}화염 피해 15-20 추가\n{turquoise}보석 미리보기:\n\n{white}(보석 포인트 {blue}-1{white})\n",
+                plPL = "{tan}Sama kostka, aby zmienić na następny typ usuwania\n\n{zielony}Tarcze/Biżuteria: {biały}Odporność na ogień +40%%\n{zielony}Hełmy/Paski: {biały}+38 do Życia\n{zielony}Zbroje/Buty: {biały}+38 do Życia\n{zielony}Broń/Rękawice: {biały}Dodaje 15-20 obrażeń od ognia\n{turkusowy}Podgląd klejnotu:\n\n{biały}(Punkty klejnotów {niebieski}-1{biały})\n",
+                ptBR = "{tan}Cubo sozinho para mudar para o próximo tipo de removedor\n\n{green}Escudos/Joias: {white}Resistência ao Fogo +40%%\n{green}Elmos/Cintos: {white}+38 de Vida\n{green}Armaduras/Botas: {white}+38 de Vida\n{green}Armas/Luvas: {white}Adiciona 15-20 de dano de fogo\n{turquoise}Prévia da Gema:\n\n{white}(Pontos de Gema {blue}-1{white})\n",
+                ruRU = "{tan}Один куб для смены на следующий тип ремувера\n\n{green}Щиты/Украшения: {white}Сопротивление огню +40%%\n{green}Шлемы/Пояса: {white}+38 к Жизни\n{green}Доспехи/Сапоги: {white}+38 к Жизни\n{green}Оружие/Перчатки: {white}Добавляет 15-20 урона от огня\n{turquoise}Предпросмотр камня:\n\n{white}(Очки камней {blue}-1{white})\n",
+                zhCN = "{tan}单独立方体即可更改为下一种移除类型\n\n{green}盾牌/珠宝：{white}防火 +40%%\n{green}头盔/腰带：{white}+38 生命\n{green}盔甲/靴子：{white}+38 生命\n{green}武器/手套：{white}增加 15-20 火焰伤害\n{turquoise}宝石预览:\n\n{white}(宝石点数 {blue}-1{white})\n",
+                zhTW = "{tan}單獨立方體即可更改為下一種移除類型\n\n{green}盾牌/珠寶：{white}防火 +40%%\n{green}頭盔/腰帶：{white}+38 生命\n{green}盔甲/靴子：{white}+38 生命\n{green}武器/手套：{white}增加 15hite}火焰傷害\n{turquoise}寶石預覽:\n\n{white}(寶石點數 {blue}-1{white})\n"
+            }
+        },
+        {
+            code = "Z07",
+            name_override = "{white}Diamond {gold}Remover",
+            location = { "onplayer", "atvendor" },
+            prefix = {
+                deDE = "{tan}Würfel allein, um zum nächsten Entfernertyp zu wechseln\n\n{green}Schilde/Schmuck: {white}Alle Widerstände +19 %%\n{green}Helme/Gürtel: {white}+100 auf Angriffswert\n{green}Rüstungen/Stiefel: {white}+100 auf Angriffswert\n{green}Waffen/Handschuhe: {white}+68 %% Schaden an Untoten\n{turquoise}Edelsteinvorschau:\n\n{white}(Edelsteinpunkte {blue}-1{white})\n",
+                enUS = "{tan}Cube alone to change to next remover type\n\n{green}Shields/Jewelry: {white}All Resistances +19%%\n{green}Helms/Belts: {white}+100 to Attack Rating\n{green}Armors/Boots: {white}+100 to Attack Rating\n{green}Weapons/Gloves: {white}+68%% Damage to Undead\n{turquoise}Gem Preview:\n\n{white}(Gem Points {blue}-1{white})\n",
+                esES = "{tan} Cubo solo para cambiar al siguiente tipo de removedor\n\n{green} Escudos/Joyas: {white} Todas las resistencias +19%%\n{green} Cascos/Cinturones: {white} +100 al índice de ataque\n{green} Armaduras/Botas: {white} +100 al índice de ataque\n{green} Armas/Guantes: {white} +68%% Daño a no muertos\n{turquoise} Vista previa de gemas:\n\n{white}(Puntos de gema {blue} -1{white})\n",
+                esMX = "{tan} Cubo solo para cambiar al siguiente tipo de removedor\n\n{green} Escudos/Joyas: {white} Todas las resistencias +19%%\n{green} Cascos/Cinturones: {white} +100 al índice de ataque\n{green} Armaduras/Botas: {white} +100 al índice de ataque\n{green} Armas/Guantes: {white} +68%% Daño a no muertos\n{turquoise} Vista previa de gemas:\n\n{white}(Puntos de gema {blue} -1{white})\n",
+                frFR = "{tan}Cube seul pour passer au type de dissolvant suivant\n\n{vert}Boucliers/Bijoux : {blanc}Toutes les résistances +19 %\n{vert}Casques/Ceintures : {blanc}+100 au taux d'attaque\n{vert}Armures/Bottes : {blanc}+100 au taux d'attaque\n{vert}Armures/Gants : {blanc}+68 % de dégâts aux morts-vivants\n{turquoise}Aperçu des gemmes :\n\n{blanc}(Points de gemmes {bleu}-1{blanc})\n",
+                itIT = "{tan}Solo cubo per passare al tipo di rimozione successivo\n\n{verde}Scudi/Gioielli: {bianco}Tutte le resistenze +19%%\n{verde}Elmi/Cinture: {bianco}+100 al punteggio di attacco\n{verde}Armature/Stivali: {bianco}+100 al punteggio di attacco\n{verde}Armi/Guanti: {bianco}+68%% danni ai non morti\n{turchese}Anteprima gemma:\n\n{bianco}(Punti gemma {blu}-1{bianco})\n",
+                jaJP = "{tan}キューブだけで次の除去タイプに変更\n\n{green}シールド/ジュエリー: {white}全耐性 +19%%\n{green}ヘルム/ベルト: {white}攻撃力 +100\n{green}アーマー/ブーツ: {white}攻撃力 +100\n{green}武器/グローブ: {white}アンデッドへのダメージ +68%%\n{turquoise}宝石プレビュー:\n\n{white}(宝石ポイント {blue}-1{white})\n",
+                koKR = "{tan}큐브만 사용하여 다음 제거 유형으로 변경\n\n{green}방패/보석: {white}모든 저항력 +19%%\n{green}헬멧/벨트: {white}공격 등급 +100\n{green}갑옷/부츠: {white}공격 등급 +100\n{green}무기/장갑: {white}언데드에게 +68%% 데미지\n{turquoise}보석 미리보기:\n\n{white}(보석 포인트 {blue}-1{white})\n",
+                plPL = "{tan}Sama kostka, aby zmienić na następny typ usuwania\n\n{zielony}Tarcze/Biżuteria: {biały}Wszystkie odporności +19%%\n{zielony}Hełmy/Paski: {biały}+100 do współczynnika ataku\n{zielony}Zbroje/Buty: {biały}+100 do współczynnika ataku\n{zielony}Broń/Rękawice: {biały}+68%% obrażeń zadanych nieumarłym\n{turkusowy}Podgląd klejnotu:\n\n{biały}(Punkty klejnotów {niebieski}-1{biały})\n",
+                ptBR = "{tan}Cubo sozinho para mudar para o próximo tipo de removedor\n\n{green}Escudos/Joias: {white}Todas as Resistências +19%%\n{green}Elmos/Cintos: {white}+100 na Classificação de Ataque\n{green}Armaduras/Botas: {white}+100 na Classificação de Ataque\n{green}Armas/Luvas: {white}+68%% de Dano a Mortos-Vivos\n{turquoise}Prévia da Gema:\n\n{white}(Pontos de Gema {blue}-1{white})\n",
+                ruRU = "{tan}Один куб для смены на следующий тип ремувера\n\n{green}Щиты/Украшения: {white}Все сопротивления +19%%\n{green}Шлемы/Пояса: {white}+100 к рейтингу атаки\n{green}Доспехи/Сапоги: {white}+100 к рейтингу атаки\n{green}Оружие/Перчатки: {white}+68%% урона по нежити\n{turquoise}Предпросмотр камня:\n\n{white}(Очки камней {blue}-1{white})\n",
+                zhCN = "{tan}单独立方体即可更改为下一种移除类型\n\n{green}盾牌/珠宝：{white}所有抗性 +19%%\n{green}头盔/腰带：{white}+100 攻击等级\n{green}盔甲/靴子：{white}+100 攻击等级\n{green}武器/手套：{white}+68%% 对亡灵造成的伤害\n{turquoise}宝石预览:\n\n{white}(宝石点数 {blue}-1{white})\n",
+                zhTW = "{tan}單獨立方體即可更改為下一種移除類型\n\n{green}盾牌/珠寶：{white}所有抗性 +19%%\n{green}頭盔/腰帶：{white}+100 攻擊等級\n{green}盔甲/靴子：{white}+100 攻擊等級\n{green}武器/手套：{wite對亡靈造成的傷害\n{turquoise}寶石預覽:\n\n{white}(寶石點數 {blue}-1{white})\n"
+            }
+        },
+        {
+            code = "Z08",
+            name_override = "{gray}Skull {gold}Remover",
+            location = { "onplayer", "atvendor" },
+            prefix = {
+                deDE = "{tan}Würfel allein, um zum nächsten Entfernertyp zu wechseln\n\n{green}Schilde/Schmuck: {white}Angreifer erleidet Schaden von 20\n{green}Helme/Gürtel: {white}Mana regenerieren 19%%, Leben auffüllen +5\n{green}Rüstungen/Stiefel: {white}Mana regenerieren 19%%, Leben auffüllen +5\n{green}Waffen/Handschuhe: {white}4%% Leben pro Treffer gestohlen, 3%% Mana pro Treffer gestohlen\n{turquoise}Edelsteinvorschau:\n\n{white}(Edelsteinpunkte {blue}-1{white})\n",
+                enUS = "{tan}Cube alone to change to next remover type\n\n{green}Shields/Jewelry: {white}Attacker Takes Damage of 20\n{green}Helms/Belts: {white}Regenerate Mana 19%%, Replenish Life +5\n{green}Armors/Boots: {white}Regenerate Mana 19%%, Replenish Life +5\n{green}Weapons/Gloves: {white}4%% Life stolen per hit, 3%% Mana stolen per hit\n{turquoise}Gem Preview:\n\n{white}(Gem Points {blue}-1{white})\n",
+                esES = "{tan} Cubo solo para cambiar al siguiente tipo de removedor\n\n{green} Escudos/Joyas: {white} El atacante recibe 20 de daño\n{green} Cascos/Cinturones: {white} Regeneración de maná 19%%, Reposición de vida +5\n{green} Armaduras/Botas: {white} Regeneración de maná 19%%, Reposición de vida +5\n{green} Armas/Guantes: {white} 4%% de vida robada por golpe, 3%% de maná robado por golpe\n{turquoise} Vista previa de gemas:\n\n{white}(Puntos de gema {blue}-1{white})\n",
+                esMX = "{tan} Cubo solo para cambiar al siguiente tipo de removedor\n\n{green} Escudos/Joyas: {white} El atacante recibe 20 de daño\n{green} Cascos/Cinturones: {white} Regeneración de maná 19%%, Reposición de vida +5\n{green} Armaduras/Botas: {white} Regeneración de maná 19%%, Reposición de vida +5\n{green} Armas/Guantes: {white} 4%% de vida robada por golpe, 3%% de maná robado por golpe\n{turquoise} Vista previa de gemas:\n\n{white}(Puntos de gema {blue}-1{white})\n",
+                frFR = "{tan}Cube seul pour passer au type de dissolvant suivant\n\n{vert}Boucliers/Bijoux : {blanc}L'attaquant subit des dégâts de 20\n{vert}Casques/Ceintures : {blanc}Régénération de mana de 19 %, Régénération de vie +5\n{vert}Armures/Bottes : {blanc}Régénération de mana de 19 %, Régénération de vie +5\n{vert}Armures/Gants : {blanc}4 % de vie volée par coup, 3 % de mana volé par coup\n{turquoise}Aperçu des gemmes :\n\n{blanc}(Points de gemmes {bleu}-1{blanc})\n",
+                itIT = "{tan}Cubo da solo per passare al tipo di rimozione successivo\n\n{verde}Scudi/Gioielli: {bianco}L'attaccante subisce danni pari a 20\n{verde}Elmi/Cinture: {bianco}Rigenera Mana 19%%, Ripristina Vita +5\n{verde}Armature/Stivali: {bianco}Rigenera Mana 19%%, Ripristina Vita +5\n{verde}Armi/Guanti: {bianco}4%% Vita rubata per colpo, 3%% Mana rubato per colpo\n{turchese}Anteprima gemma:\n\n{bianco}(Punti gemma {blu}-1{bianco})\n",
+                jaJP = "{tan}キューブのみで次の除去タイプに変更\n\n{green}シールド/ジュエリー: {white}攻撃者が20のダメージを受ける\n{green}ヘルム/ベルト: {white}マナ回復 19%%、ライフ回復 +5\n{green}アーマー/ブーツ: {white}マナ回復 19%%、ライフ回復 +5\n{green}武器/グローブ: {white}ヒットごとにライフが4%%、マナが3%%奪われる\n{turquoise}ジェムプレビュー:\n\n{white}(ジェムポイント {blue}-1{white})\n",
+                koKR = "{tan}큐브만 사용하여 다음 제거 유형으로 변경\n\n{green}방패/보석: {white}공격자가 20의 피해를 입습니다\n{green}헬멧/벨트: {white}마나 19%% 재생, 생명력 +5 회복\n{green}갑옷/부츠: {white}마나 19%% 재생, 생명력 +5 회복\n{green}무기/장갑: {white}타격 시 생명력 4%% 훔침, 타격 시 마나 3%% 훔침\n{turquoise}보석 미리보기:\n\n{white}(보석 포인트 {blue}-1{white})\n",
+                plPL = "{tan}Sama kostka, aby zmienić na następny typ usuwania\n\n{zielony}Tarcze/Biżuteria: {biały}Atakujący otrzymuje obrażenia 20\n{zielony}Hełmy/Paski: {biały}Regenerują manę 19%%, Uzupełniają życie +5\n{zielony}Zbroje/Buty: {biały}Regenerują manę 19%%, Uzupełniają życie +5\n{zielony}Broń/Rękawice: {biały}4%% skradzionego życia na trafienie, 3%% skradzionej many na trafienie\n{turkusowy}Podgląd klejnotu:\n\n{biały}(Punkty klejnotów {niebieski}-1{biały})\n",
+                ptBR = "{tan}Cubo sozinho para mudar para o próximo tipo de removedor\n\n{green}Escudos/Joias: {white}O atacante recebe 20 de dano\n{green}Elmos/Cintos: {white}Regenera Mana 19%%, Repõe Vida +5\n{green}Armaduras/Botas: {white}Regenera Mana 19%%, Repõe Vida +5\n{green}Armas/Luvas: {white}4%% de Vida roubada por acerto, 3%% de Mana roubada por acerto\n{turquoise}Prévia da Gema:\n\n{white}(Pontos de Gema {blue}-1{white})\n",
+                ruRU = "{tan}Один куб для смены типа ремувера\n\n{green}Щиты/Украшения: {white}Атакующий получает урон 20\n{green}Шлемы/Пояса: {white}Регенерация маны 19%%, восстановление жизни +5\n{green}Доспехи/Сапоги: {white}Регенерация маны 19%%, восстановление жизни +5\n{green}Оружие/Перчатки: {white}4%% кражи жизни за удар, 3%% кражи маны за удар\n{turquoise}Предпросмотр камня:\n\n{white}(Очки камней {blue}-1{white})\n",
+                zhCN = "{tan}单独立方体即可更改为下一种移除类型\n\n{green}盾牌/珠宝：{white}攻击者受到 20 点伤害\n{green}头盔/腰带：{white}法力再生 19%%，生命补充 +5\n{green}盔甲/靴子：{white}法力再生 19%%，生命补充 +5\n{green}武器/手套：{white}每次攻击窃取 4%% 生命，每次攻击窃取 3%% 法力\n{turquoise}宝石预览:\n\n{white}(宝石点数 {blue}-1{white})\n",
+                zhTW = "{tan}單獨立方體即可更改為下一種移除類型\n\n{green}盾牌/珠寶：{white}攻擊者受到 20 點傷害\n{green}頭盔/腰帶：{white}法力再生 19%%，生命補充 +5\n{green}盔甲/靴子：{white}法力再生 19%%，生命補充 +5\n{green}護甲/靴子：{white}法力再生 19%%，每次補生命，每次攻擊竊取 3%% 法力\n{turquoise}寶石預覽:\n\n{white}(寶石點數 {blue}-1{white})\n"
             }
         },
         {
