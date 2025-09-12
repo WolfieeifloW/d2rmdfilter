@@ -6,4 +6,4 @@ Filter shows all Set and Unique items!
 In the launcher select Options -> Loot Filter. Click "+ Load New Filter" and select the file you downloaded from here or GitHub or check if the filter is already in the dropdown list.  
 Check this post or GitHub to ensure you have the latest version!
 
-For more information please look at my Discord post here: https://discord.com/channels/897073630868013057/1408688745431040011/1414745405429780520
+For more information please look at my Discord post here: https://discord.com/channels/897073630868013057/1408688745431040011/1408688745431040011
