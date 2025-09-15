@@ -1,4 +1,4 @@
---- Filter Title: WolfieeifloW's Filter v1.8
+--- Filter Title: WolfieeifloW's Filter v1.10
 --- Filter Type: Relaxed, non-strict
 --- Filter Description: Adding some QoL to the game while maintaining a very LoD-like style.\n\nHides small gold piles, Magic items that can be gambled instead for crafting, and in the later character levels it hides useless bases; everything else is shown.\nNotifies and adds borders to good items and new RMD items.\nFilter is very non-strict. For those who are collectors or those who like to still see loot.
 
@@ -21,7 +21,7 @@
 -- - Filter more Base items that are 'bad' bases
 
 return {
-    reload = "WolfieeifloW's Filter v1.8: {green}reloaded",
+    reload = "WolfieeifloW's Filter v1.10: {green}reloaded",
     rules = {
         -- +-------------------------+
         -- | GOLD                    |
@@ -108,7 +108,7 @@ return {
         },
         { -- Rule 14: Fixing Storage Bag helper info
             code = "Z01",
-            prefix = "{purple}------------------\nÿcU(Cube with item to store it)\n",
+            prefix_desc = "{purple}------------------\nÿcU(Cube with item to store it)\n",
             location = "onplayer"
         },
         { -- Rule 15: Reminder to pick up Starter's Cube of Endless Convenience so it doesn't get left behind
@@ -396,7 +396,7 @@ return {
             codes = "allitems",
             ethereal = true,
             sockets = "1+",
-            prefix = "ÿcI",
+            -- prefix = "ÿcI",
             suffix = "{gray}[{sockets}]"
         },
         { -- Rule 54: Adding socket number tag to Non-Ethereal items
@@ -406,238 +406,244 @@ return {
             suffix = " {gray}[{sockets}]"
             -- This second rule makes [Eth] and socket number ([#]) beside each other
         },
-        { -- Rule 55: Adding superscript "1" in front of Normal tier items names
-            codes = "allitems",
-            rarity = 0,
-            itype = { 45, 50 },
-            location = { "onground", "onplayer", "equipped", "atvendor" },
-            prefix = "¹"
-        },
-        { -- Rule 56: Adding superscript "2" in front of Exceptional tier items names
-            codes = "allitems",
-            rarity = 1,
-            itype = { 45, 50 },
-            location = { "onground", "onplayer", "equipped", "atvendor" },
-            prefix = "²"
-        },
-        { -- Rule 57: Adding superscript "EB 3" in front of Elite tier items names
-            codes = NOT { "l01", "l02", "l03", "l04", "l05", "l06", "l07", "l08", "l09", "l10", "l11", "l12", "l13", "l14","l15", "l16", "l17" },
-            rarity = 2,
-            itype = { 45, 50 },
-            location = { "onground", "onplayer", "equipped", "atvendor" },
-            prefix = "ⅲ ³"
-        },
-        { -- Rule 58: Adding superscript "LB 3" in front of Elite tier Limit Break items names
-            codes = { "l01", "l02", "l03", "l04", "l05", "l06", "l07", "l08", "l09", "l10", "l11", "l12", "l13", "l14","l15", "l16", "l17" },
-            rarity = 2,
-            itype = { 45, 50 },
-            location = { "onground", "onplayer", "equipped", "atvendor" },
-            prefix = "ⅳ ³"
-            -- prefix = "⁴"
-        },
+        -- { -- Rule 55: Adding superscript "1" in front of Normal tier items names
+        --     codes = "allitems",
+        --     rarity = 0,
+        --     itype = { 45, 50 },
+        --     location = { "onground", "onplayer", "equipped", "atvendor" },
+        --     prefix = "¹"
+        -- },
+        -- { -- Rule 56: Adding superscript "2" in front of Exceptional tier items names
+        --     codes = "allitems",
+        --     rarity = 1,
+        --     itype = { 45, 50 },
+        --     location = { "onground", "onplayer", "equipped", "atvendor" },
+        --     prefix = "²"
+        -- },
+        -- { -- Rule 57: Adding superscript "EB 3" in front of Elite tier items names
+        --     codes = NOT { "l01", "l02", "l03", "l04", "l05", "l06", "l07", "l08", "l09", "l10", "l11", "l12", "l13", "l14","l15", "l16", "l17" },
+        --     rarity = 2,
+        --     itype = { 45, 50 },
+        --     location = { "onground", "onplayer", "equipped", "atvendor" },
+        --     prefix = "ⅲ ³"
+        -- },
+        -- { -- Rule 58: Adding superscript "LB 3" in front of Elite tier Limit Break items names
+        --     codes = { "l01", "l02", "l03", "l04", "l05", "l06", "l07", "l08", "l09", "l10", "l11", "l12", "l13", "l14","l15", "l16", "l17" },
+        --     rarity = 2,
+        --     itype = { 45, 50 },
+        --     location = { "onground", "onplayer", "equipped", "atvendor" },
+        --     prefix = "ⅳ ³"
+        --     -- prefix = "⁴"
+        -- },
         -- +-------------------------+
         -- | ITEM HELPER TEXT        |
         -- +-------------------------+
         { -- Rule 59: Scroll of Inifuss
             code = "bks",
             location = "onplayer",
-            prefix = "{gold}in Act 1\nTalk to Akara\n"
+            prefix_desc = "{gold}in Act 1\nTalk to Akara\n"
         },
         { -- Rule 60: Scroll of Inifuss, deciphered
             code = "bkd",
             location = "onplayer",
-            prefix = "{gold}Go to Act 1: Stony Field\n"
+            prefix_desc = "{gold}Go to Act 1: Stony Field\n"
         },
         { -- Rule 61: Wirt's Leg
             code = "leg",
             location = "onplayer",
-            prefix = "{gold}Act 1 to open Cow Level\nCube w/ Tome of Town Portal in\n"
+            prefix_desc = "{gold}Act 1 to open Cow Level\nCube w/ Tome of Town Portal in\n"
         },
         { -- Rule 62: Horadric Malus
             code = "hdm",
             location = "onplayer",
-            prefix = "{gold}Give to Charsi in Act 1\n"
+            prefix_desc = "{gold}Give to Charsi in Act 1\n"
         },
         { -- Rule 63: Book of Skill
             code = "ass",
             location = "onplayer",
-            prefix = "{gold}+1 Skill Point\nRight click for \n"
+            prefix_desc = "{gold}+1 Skill Point\nRight click for \n"
         },
         { -- Rule 64: Horadric Staff
             code = "hst",
             location = "onplayer",
-            prefix = "{red}0  )  []  +  >>  /\\  0)\nTombs:\n\n{gold}Act 2: Tal Rashas Tomb\nPlace in Tomb Orifice in\n"
+            prefix_desc = "{red}0  )  []  +  >>  /\\  0)\nTombs:\n{gold}Act 2: Tal Rashas Tomb\nPlace in Tomb Orifice in\n"
         },
         { -- Rule 65: Amulet of the Viper
             code = "vip",
             location = "onplayer",
-            prefix = "{orange}Staff of Kings {gold}(Act 2 Maggot Lair)\nCube with:\n"
+            prefix_desc = "{orange}Staff of Kings {gold}(Act 2 Maggot Lair)\nCube with:\n"
         },
         { -- Rule 66: Staff of Kings
             code = "msf",
             location = "onplayer",
-            prefix = "{orange}Amulet of the Viper {gold}(Act 2: Claw Viper Temple)\nCube with:\n"
+            prefix_desc = "{orange}Amulet of the Viper {gold}(Act 2: Claw Viper Temple)\nCube with:\n"
         },
         { -- Rule 67: A Jade Figurine
             code = "j34",
             location = "onplayer",
-            prefix = "{gold}in Act 3\nGive to Meshif\n"
+            prefix_desc = "{gold}in Act 3\nGive to Meshif\n"
         },
         { -- Rule 68: The Golden Bird
             code = "g34",
             location = "onplayer",
-            prefix = "{gold}in Act 3\nGive to Alkor\n"
+            prefix_desc = "{gold}in Act 3\nGive to Alkor\n"
         },
         { -- Rule 69: Potion of Life
             code = "xyz",
             location = "onplayer",
-            prefix = "{gold}permanent +20 to Life\nRight click for a\n"
+            prefix_desc = "{gold}permanent +20 to Life\nRight click for a\n"
         },
         { -- Rule 70: Gidbinn
             code = "g33",
             location = "onplayer",
-            prefix = "{gold}Give to Ormus in Act 3\n"
+            prefix_desc = "{gold}Give to Ormus in Act 3\n"
         },
         { -- Rule 71: Khalim's Eye
             code = "qey",
             location = "onplayer",
-            prefix = "{orange}Khalim's Flail {gold}(Act 3: Travincal)\n{orange}Khalim's Heart {gold}(Act 3: Kurast Sewers)\n{orange}Khalim's Brain {gold}(Act 3: Flayer Dungeon)\nCube with:\n\nDrops in Act 3: Spider Cavern\n"
+            prefix_desc = "{orange}Khalim's Flail {gold}(Act 3: Travincal)\n{orange}Khalim's Heart {gold}(Act 3: Kurast Sewers)\n{orange}Khalim's Brain {gold}(Act 3: Flayer Dungeon)\nCube with:\n\nDrops in Act 3: Spider Cavern\n"
         },
         { -- Rule 72: Khalim's Brain
             code = "qbr",
             location = "onplayer",
-            prefix = "{orange}Khalim's Flail {gold}(Act 3: Travincal)\n{orange}Khalim's Heart {gold}(Act 3: Kurast Sewers)\n{orange}Khalim's Eye {gold}(Act 3: Spider Cavern)\nCube with:\n\nDrops in Act 3: Flayer Dungeon\n"
+            prefix_desc = "{orange}Khalim's Flail {gold}(Act 3: Travincal)\n{orange}Khalim's Heart {gold}(Act 3: Kurast Sewers)\n{orange}Khalim's Eye {gold}(Act 3: Spider Cavern)\nCube with:\n\nDrops in Act 3: Flayer Dungeon\n"
         },
         { -- Rule 73: Khalim's Heart
             code = "qhr",
             location = "onplayer",
-            prefix = "{orange}Khalim's Flail {gold}(Act 3: Travincal)\n{orange}Khalim's Brain {gold}(Act 3: Flayer Dungeon)\n{orange}Khalim's Eye {gold}(Act 3: Spider Cavern)\nCube with:\n\nDrops in Act 3: Kurast Sewers\n"
+            prefix_desc = "{orange}Khalim's Flail {gold}(Act 3: Travincal)\n{orange}Khalim's Brain {gold}(Act 3: Flayer Dungeon)\n{orange}Khalim's Eye {gold}(Act 3: Spider Cavern)\nCube with:\n\nDrops in Act 3: Kurast Sewers\n"
         },
         { -- Rule 74: Khalim's Flail
             code = "qf1",
             location = "onplayer",
-            prefix = "{orange}Khalim's Heart {gold}(Act 3: Kurast Sewers)\n{orange}Khalim's Brain {gold}(Act 3: Flayer Dungeon)\n{orange}Khalim's Eye {gold}(Act 3: Spider Cavern)\nCube with:\n\nDrops in Act 3: Travincal\n"
+            prefix_desc = "{orange}Khalim's Heart {gold}(Act 3: Kurast Sewers)\n{orange}Khalim's Brain {gold}(Act 3: Flayer Dungeon)\n{orange}Khalim's Eye {gold}(Act 3: Spider Cavern)\nCube with:\n\nDrops in Act 3: Travincal\n"
         },
         { -- Rule 75: Khalim's Will
             code = "qf2",
             location = "onplayer",
-            prefix = "{gold}Attack Compelling Orb in Act 3: Travincal\n"
+            prefix_desc = "{gold}Attack Compelling Orb in Act 3: Travincal\n"
         },
         { -- Rule 76: Lam Esen's Tome
             code = "bbb",
             location = "onplayer",
-            prefix = "{gold}+5 Stat Points\nGive to Alkor for\n"
+            prefix_desc = "{gold}+5 Stat Points\nGive to Alkor for\n"
         },
         { -- Rule 77: Mephisto's Soulstone
             code = "mss",
             location = "onplayer",
-            prefix = "{gold}Act 4: River of Flame\nTake to the Hellforge in\n"
+            prefix_desc = "{gold}Act 4: River of Flame\nTake to the Hellforge in\n"
         },
         { -- Rule 78: Hellforge Hammer
             code = "hfh",
             location = "onplayer",
-            prefix = "{gold}Attack Hellforge in Act 4: River of Flame\n"
+            prefix_desc = "{gold}Attack Hellforge in Act 4: River of Flame\n"
         },
         { -- Rule 79: Malah's Potion
             code = "ice",
             location = "onplayer",
-            prefix = "{gold}Act 5: Frozen River\nTouch Anya in\n"
+            prefix_desc = "{gold}Act 5: Frozen River\nTouch Anya in\n"
         },
         { -- Rule 80: Scroll of Resistance
             code = "tr2",
             location = "onplayer",
-            prefix = "{gold}All Resistances +10\nRight click for a permanent\n"
+            prefix_desc = "{gold}All Resistances +10\nRight click for a permanent\n"
         },
         { -- Rule 81: Twisted Essence of Suffering
             code = "tes",
             location = "onplayer",
-            prefix = "{gold}Cube with 1x of each essence for a Socket Remover\n\nCube with Storage Bag for +(4-7) Gems\nDrops from Hell Andariel\n{orange}"
+            prefix_desc = "{gold}Cube with 1x of each essence for a Socket Remover\n\nCube with Storage Bag for +(4-7) Gems\nDrops from Hell Andariel\n{orange}"
         },
         { -- Rule 82: Charged Essence of Hatred
             code = "ceh",
             location = "onplayer",
-            prefix = "{gold}Cube with 1x of each essence for a Socket Remover\n\nCube with Storage Bag for +(1-3) High Rune Points\nDrops from Hell Mephisto\n{orange}"
+            prefix_desc = "{gold}Cube with 1x of each essence for a Socket Remover\n\nCube with Storage Bag for +(1-3) High Rune Points\nDrops from Hell Mephisto\n{orange}"
         },
         { -- Rule 83: Burning Essence of Terror
             code = "bet",
             location = "onplayer",
-            prefix = "{gold}Cube with 1x of each essence for a Socket Remover\n\nCube with Storage Bag for +(3-6) Set Cores\nDrops from Hell Diablo\n{orange}"
+            prefix_desc = "{gold}Cube with 1x of each essence for a Socket Remover\n\nCube with Storage Bag for +(3-6) Set Cores\nDrops from Hell Diablo\n{orange}"
         },
         { -- Rule 84: Festering Essence of Destruction
             code = "fed",
             location = "onplayer",
-            prefix = "{gold}Cube with 1x of each essence for a Socket Remover\n\nCube with Storage Bag for +(3-6) Unique Cores\nDrops from Hell Baal\n{orange}"
+            prefix_desc = "{gold}Cube with 1x of each essence for a Socket Remover\n\nCube with Storage Bag for +(3-6) Unique Cores\nDrops from Hell Baal\n{orange}"
         },
         { -- Rule 85: Key of Terror
             code = "pk1",
             location = "onplayer",
-            prefix = "{gold}Cube 2x {orange}Key of Terror {gold}to get 1x {orange}Key of Hate\n\n{orange}Key of Destruction {gold}(Hell Nihlathak)\n{orange}Key of Hate {gold}(Hell Summoner)\nOpen Mini-Uber portal by cubing in Act 5 with:\nDrops from Hell Countess\n{orange}"
+            prefix_desc = "{gold}Cube 2x {orange}Key of Terror {gold}to get 1x {orange}Key of Hate\n\n{orange}Key of Destruction {gold}(Hell Nihlathak)\n{orange}Key of Hate {gold}(Hell Summoner)\nOpen Mini-Uber portal by cubing in Act 5 with:\nDrops from Hell Countess\n{orange}"
         },
         { -- Rule 86: Key of Hate
             code = "pk2",
             location = "onplayer",
-            prefix = "{gold}Cube 2x {orange}Key of Hate {gold}to get 1x {orange}Key of Destruction\n\n{orange}Key of Destruction {gold}(Hell Nihlathak)\n{orange}Key of Terror {gold}(Hell Countess)\nOpen Mini-Uber portal by cubing in Act 5 with:\nDrops from Hell Summoner\n{orange}"
+            prefix_desc = "{gold}Cube 2x {orange}Key of Hate {gold}to get 1x {orange}Key of Destruction\n\n{orange}Key of Destruction {gold}(Hell Nihlathak)\n{orange}Key of Terror {gold}(Hell Countess)\nOpen Mini-Uber portal by cubing in Act 5 with:\nDrops from Hell Summoner\n{orange}"
         },
         { -- Rule 87: Key of Destruction
             code = "pk3",
             location = "onplayer",
-            prefix = "{gold}Cube 2x {orange}Key of Destruction {gold}to get 1x {orange}Key of Terror\n\n{orange}Key of Hate {gold}(Hell Summoner)\n{orange}Key of Terror {gold}(Hell Countess)\nOpen Mini-Uber portal by cubing in Act 5 with:\nDrops from Hell Nihlathak\n{orange}"
+            prefix_desc = "{gold}Cube 2x {orange}Key of Destruction {gold}to get 1x {orange}Key of Terror\n\n{orange}Key of Hate {gold}(Hell Summoner)\n{orange}Key of Terror {gold}(Hell Countess)\nOpen Mini-Uber portal by cubing in Act 5 with:\nDrops from Hell Nihlathak\n{orange}"
         },
         { -- Rule 88: Mephisto's Brain
             code = "mbr",
             location = "onplayer",
-            prefix = "{orange}Baal's Eye {gold}(Forgotten Sands: Uber Duriel)\n{orange}Diablo's Horn {gold}(Matron's Den: Lilith)\nOpen Uber Tristram portal by cubing in Act 5 with:\nDrops from Furance of Pain: Uber Izual\n{orange}"
+            prefix_desc = "{orange}Baal's Eye {gold}(Forgotten Sands: Uber Duriel)\n{orange}Diablo's Horn {gold}(Matron's Den: Lilith)\nOpen Uber Tristram portal by cubing in Act 5 with:\nDrops from Furance of Pain: Uber Izual\n{orange}"
         },
         { -- Rule 89: Diablo's Horn
             code = "dhn",
             location = "onplayer",
-            prefix = "{orange}Baal's Eye {gold}(Forgotten Sands: Uber Duriel)\n{orange}Mephisto's Brain {gold}(Furance of Pain: Uber Izual)\nOpen Uber Tristram portal by cubing in Act 5 with:\nDrops from Matron's Den: Lilith\n{orange}"
+            prefix_desc = "{orange}Baal's Eye {gold}(Forgotten Sands: Uber Duriel)\n{orange}Mephisto's Brain {gold}(Furance of Pain: Uber Izual)\nOpen Uber Tristram portal by cubing in Act 5 with:\nDrops from Matron's Den: Lilith\n{orange}"
         },
         { -- Rule 90: Baal's Eye
             code = "bey",
             location = "onplayer",
-            prefix = "{orange}Diablo's Horn {gold}(Matron's Den: Lilith)\n{orange}Mephisto's Brain {gold}(Furance of Pain: Uber Izual)\nOpen Uber Tristram portal by cubing in Act 5 with:\nDrops from Forgotten Sands: Uber Duriel\n{orange}"
+            prefix_desc = "{orange}Diablo's Horn {gold}(Matron's Den: Lilith)\n{orange}Mephisto's Brain {gold}(Furance of Pain: Uber Izual)\nOpen Uber Tristram portal by cubing in Act 5 with:\nDrops from Forgotten Sands: Uber Duriel\n{orange}"
         },
         { -- Rule 91: Standard of Heroes
             code = "std",
             location = "onplayer",
-            prefix = "{gold}Can be sold to vendors to spawn Über Diablo\n"
+            prefix_desc = "{gold}Can be sold to vendors to spawn Über Diablo\n"
         },
         { -- Rule 92: Amethyst gems
             codes = "allitems",
             itype = 96,
             location = "onplayer",
-            prefix = "{gold}Used in Caster crafting\n"
+            -- prefix_desc = "{gold}Used in Caster crafting\n"
+            suffix = "\n{gold}Used in Safety crafting"
         },
         { -- Rule 93: Diamond gems
             codes = "allitems",
             itype = 97,
             location = "onplayer",
-            prefix = "{gold}Used in Legion crafting\n{white}"
+            -- prefix_desc = "{gold}Used in Legion crafting\n{white}"
+            suffix = "\n{gold}Used in Safety crafting"
         },
         { -- Rule 94: Emerald gems
             codes = "allitems",
             itype = 98,
             location = "onplayer",
-            prefix = "{gold}Used in Safety crafting\n"
+            -- prefix_desc = "\n{gold}Used in Safety crafting"
+            suffix = "\n{gold}Used in Safety crafting"
         },
         { -- Rule 95: Ruby gems
             codes = "allitems",
             itype = 99,
             location = "onplayer",
-            prefix = "{gold}Used in Blood crafting\n"
+            -- prefix_desc = "{gold}Used in Blood crafting\n"
+            suffix = "\n{gold}Used in Safety crafting"
         },
         { -- Rule 96: Sapphire gems
             codes = "allitems",
             itype = 100,
             location = "onplayer",
-            prefix = "{gold}Used in Hit Power crafting\n"
+            -- prefix_desc = "{gold}Used in Hit Power crafting\n"
+            suffix = "\n{gold}Used in Safety crafting"
         },
         { -- Rule 97: Topaz gems
             codes = "allitems",
             itype = 101,
             location = "onplayer",
-            prefix = "{gold}Used in Disarm crafting\n"
+            -- prefix_desc = "{gold}Used in Disarm crafting\n"
+            suffix = "\n{gold}Used in Safety crafting"
         },
         { -- Rule 98: Normal Unique Armor upgrade recipe
             codes = "allitems",
@@ -645,7 +651,7 @@ return {
             quality = 7,
             rarity = 0,
             location = "onplayer",
-            prefix = "{gold}Shael Rune, & Diamond\nCube w/ Tal Rune,\n{orange}Upgrade Recipe:\n{gold}"
+            prefix_desc = "{gold}Shael Rune, & Diamond\nCube w/ Tal Rune,\n{orange}Upgrade Recipe:\n{gold}"
         },
         { -- Rule 99: Exceptional Unique Armor upgrade recipe
             codes = "allitems",
@@ -653,7 +659,7 @@ return {
             quality = 7,
             rarity = 1,
             location = "onplayer",
-            prefix = "{gold}Lem Rune, & Diamond\nCube w/ Ko Rune,\n{orange}Upgrade Recipe:\n{gold}"
+            prefix_desc = "{gold}Lem Rune, & Diamond\nCube w/ Ko Rune,\n{orange}Upgrade Recipe:\n{gold}"
         },
         { -- Rule 100: Normal Unique Weapon upgrade recipe
             codes = NOT { "hst", "hdm", "msf", "g33", "qf1", "qf2", "hfh" },
@@ -661,7 +667,7 @@ return {
             quality = 7,
             rarity = 0,
             location = "onplayer",
-            prefix = "{gold}Sol Rune, & Emerald\nCube w/ Ral Rune,\n{orange}Upgrade Recipe:\n{gold}"
+            prefix_desc = "{gold}Sol Rune, & Emerald\nCube w/ Ral Rune,\n{orange}Upgrade Recipe:\n{gold}"
         },
         { -- Rule 101: Exceptional Unique Weapon upgrade recipe
             codes = "allitems",
@@ -669,24 +675,24 @@ return {
             quality = 7,
             rarity = 1,
             location = "onplayer",
-            prefix = "{gold}Pul Rune, & Emerald\nCube w/ Lum Rune,\n{orange}Upgrade Recipe:\n{gold}"
+            prefix_desc = "{gold}Pul Rune, & Emerald\nCube w/ Lum Rune,\n{orange}Upgrade Recipe:\n{gold}"
         },
         { -- Rule 102: Socket Remover
             code = "b64",
             location = "onplayer",
-            prefix = "{gold}Socket Remover (keeps Runes/Jewels)\nCube 10x together for a Premium\n"
+            prefix_desc = "{gold}Socket Remover (keeps Runes/Jewels)\nCube 10x together for a Premium\n"
         },
         { -- Rule 103: Magic Jewels
             code = "jew",
             quality = 4,
             location = "onplayer",
-            prefix = "{gold}Cube 10x {blue}Magic Jewels {gold}for 1x {yellow}Rare Jewel\n{blue}"
+            prefix_desc = "{gold}Cube 10x {blue}Magic Jewels {gold}for 1x {yellow}Rare Jewel\n{blue}"
         },
         { -- Rule 104: Rainbow Facets
             code = "jew",
             quality = 7,
             location = "onplayer",
-            prefix = "{gold}(30 total; 5x {red}Fire{gold}, 5x {yellow}Lightning{gold}, 5x {blue}Cold{gold}, 5x {green}Poison{gold}, 5x Physical, 5x {orange}Magic{gold})\nCube 5x of each Element for a {yellow}P{blue}r{red}i{green}s{gold}m{yellow}a{blue}t{red}i{green}c {yellow}F{blue}a{red}c{green}e{gold}t\n"
+            prefix_desc = "{gold}(30 total; 5x {red}Fire{gold}, 5x {yellow}Lightning{gold}, 5x {blue}Cold{gold}, 5x {green}Poison{gold}, 5x Physical, 5x {orange}Magic{gold})\nCube 5x of each Element for a {yellow}P{blue}r{red}i{green}s{gold}m{yellow}a{blue}t{red}i{green}c {yellow}F{blue}a{red}c{green}e{gold}t\n"
         },
         -- +-------------------------+
         -- | TESTING                 |
