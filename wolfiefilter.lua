@@ -1,4 +1,4 @@
---- Filter Title: WolfieeifloW's Filter v1.10
+--- Filter Title: WolfieeifloW's Filter v1.11
 --- Filter Type: Relaxed, non-strict
 --- Filter Description: Adding some QoL to the game while maintaining a very LoD-like style.\n\nHides small gold piles, Magic items that can be gambled instead for crafting, and in the later character levels it hides useless bases; everything else is shown.\nNotifies and adds borders to good items and new RMD items.\nFilter is very non-strict. For those who are collectors or those who like to still see loot.
 
@@ -21,7 +21,7 @@
 -- - Filter more Base items that are 'bad' bases
 
 return {
-    reload = "WolfieeifloW's Filter v1.10: {green}reloaded",
+    reload = "WolfieeifloW's Filter v1.11: {green}reloaded",
     rules = {
         -- +-------------------------+
         -- | GOLD                    |
@@ -396,7 +396,7 @@ return {
             codes = "allitems",
             ethereal = true,
             sockets = "1+",
-            -- prefix = "ÿcI",
+            prefix = "ÿcI",
             suffix = "{gray}[{sockets}]"
         },
         { -- Rule 54: Adding socket number tag to Non-Ethereal items
@@ -406,35 +406,35 @@ return {
             suffix = " {gray}[{sockets}]"
             -- This second rule makes [Eth] and socket number ([#]) beside each other
         },
-        -- { -- Rule 55: Adding superscript "1" in front of Normal tier items names
-        --     codes = "allitems",
-        --     rarity = 0,
-        --     itype = { 45, 50 },
-        --     location = { "onground", "onplayer", "equipped", "atvendor" },
-        --     prefix = "¹"
-        -- },
-        -- { -- Rule 56: Adding superscript "2" in front of Exceptional tier items names
-        --     codes = "allitems",
-        --     rarity = 1,
-        --     itype = { 45, 50 },
-        --     location = { "onground", "onplayer", "equipped", "atvendor" },
-        --     prefix = "²"
-        -- },
-        -- { -- Rule 57: Adding superscript "EB 3" in front of Elite tier items names
-        --     codes = NOT { "l01", "l02", "l03", "l04", "l05", "l06", "l07", "l08", "l09", "l10", "l11", "l12", "l13", "l14","l15", "l16", "l17" },
-        --     rarity = 2,
-        --     itype = { 45, 50 },
-        --     location = { "onground", "onplayer", "equipped", "atvendor" },
-        --     prefix = "ⅲ ³"
-        -- },
-        -- { -- Rule 58: Adding superscript "LB 3" in front of Elite tier Limit Break items names
-        --     codes = { "l01", "l02", "l03", "l04", "l05", "l06", "l07", "l08", "l09", "l10", "l11", "l12", "l13", "l14","l15", "l16", "l17" },
-        --     rarity = 2,
-        --     itype = { 45, 50 },
-        --     location = { "onground", "onplayer", "equipped", "atvendor" },
-        --     prefix = "ⅳ ³"
-        --     -- prefix = "⁴"
-        -- },
+        { -- Rule 55: Adding superscript "1" in front of Normal tier items names
+            codes = "allitems",
+            rarity = 0,
+            itype = { 45, 50 },
+            location = { "onground", "onplayer", "equipped", "atvendor" },
+            prefix = "¹"
+        },
+        { -- Rule 56: Adding superscript "2" in front of Exceptional tier items names
+            codes = "allitems",
+            rarity = 1,
+            itype = { 45, 50 },
+            location = { "onground", "onplayer", "equipped", "atvendor" },
+            prefix = "²"
+        },
+        { -- Rule 57: Adding superscript "EB 3" in front of Elite tier items names
+            codes = NOT { "l01", "l02", "l03", "l04", "l05", "l06", "l07", "l08", "l09", "l10", "l11", "l12", "l13", "l14","l15", "l16", "l17" },
+            rarity = 2,
+            itype = { 45, 50 },
+            location = { "onground", "onplayer", "equipped", "atvendor" },
+            prefix = "ⅲ ³"
+        },
+        { -- Rule 58: Adding superscript "LB 3" in front of Elite tier Limit Break items names
+            codes = { "l01", "l02", "l03", "l04", "l05", "l06", "l07", "l08", "l09", "l10", "l11", "l12", "l13", "l14","l15", "l16", "l17" },
+            rarity = 2,
+            itype = { 45, 50 },
+            location = { "onground", "onplayer", "equipped", "atvendor" },
+            prefix = "ⅳ ³"
+            -- prefix = "⁴"
+        },
         -- +-------------------------+
         -- | ITEM HELPER TEXT        |
         -- +-------------------------+
@@ -607,43 +607,37 @@ return {
             codes = "allitems",
             itype = 96,
             location = "onplayer",
-            -- prefix_desc = "{gold}Used in Caster crafting\n"
-            suffix = "\n{gold}Used in Safety crafting"
+            prefix = "{gold}Used in Caster crafting\n"
         },
         { -- Rule 93: Diamond gems
             codes = "allitems",
             itype = 97,
             location = "onplayer",
-            -- prefix_desc = "{gold}Used in Legion crafting\n{white}"
-            suffix = "\n{gold}Used in Safety crafting"
+            prefix = "{gold}Used in Legion crafting\n{white}"
         },
         { -- Rule 94: Emerald gems
             codes = "allitems",
             itype = 98,
             location = "onplayer",
-            -- prefix_desc = "\n{gold}Used in Safety crafting"
-            suffix = "\n{gold}Used in Safety crafting"
+            prefix = "{gold}Used in Safety crafting\n"
         },
         { -- Rule 95: Ruby gems
             codes = "allitems",
             itype = 99,
             location = "onplayer",
-            -- prefix_desc = "{gold}Used in Blood crafting\n"
-            suffix = "\n{gold}Used in Safety crafting"
+            prefix = "{gold}Used in Blood crafting\n"
         },
         { -- Rule 96: Sapphire gems
             codes = "allitems",
             itype = 100,
             location = "onplayer",
-            -- prefix_desc = "{gold}Used in Hit Power crafting\n"
-            suffix = "\n{gold}Used in Safety crafting"
+            prefix = "{gold}Used in Hit Power crafting\n"
         },
         { -- Rule 97: Topaz gems
             codes = "allitems",
             itype = 101,
             location = "onplayer",
-            -- prefix_desc = "{gold}Used in Disarm crafting\n"
-            suffix = "\n{gold}Used in Safety crafting"
+            prefix = "{gold}Used in Disarm crafting\n"
         },
         { -- Rule 98: Normal Unique Armor upgrade recipe
             codes = "allitems",
